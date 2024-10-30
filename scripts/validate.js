@@ -8,100 +8,62 @@ const results = {
 
 function validateTranslation(filePath, baseTranslation) {
     try {
-        // Read the translation file
+        // Read and parse the translation file
         const content = fs.readFileSync(filePath, 'utf8');
-        const filename = path.basename(filePath);
-
-        // Common JSON issues check before parsing
-        if (content.includes("'")) {
-            results.errors.push(`${filename}: Found single quotes (') - JSON requires double quotes (")`);
+        const translation = JSON.parse(content);
+        console.log(`✓ ${path.basename(filePath)} is valid JSON`);
+        
+        // Get keys from both files
+        const baseKeys = Object.keys(baseTranslation);
+        const translationKeys = Object.keys(translation);
+        
+        // Check for missing and extra keys
+        const missingKeys = baseKeys.filter(key => !translationKeys.includes(key));
+        const extraKeys = translationKeys.filter(key => !baseKeys.includes(key));
+        
+        if (missingKeys.length > 0) {
             results.valid = false;
+            results.errors.push(`Missing keys: ${missingKeys.join(', ')}`);
         }
-
-        if (/,(\s*[}\]])/g.test(content)) {
-            results.errors.push(`${filename}: Found trailing comma(s) - JSON doesn't allow trailing commas`);
+        
+        if (extraKeys.length > 0) {
             results.valid = false;
+            results.errors.push(`Extra keys that don't exist in en-US.json: ${extraKeys.join(', ')}`);
         }
-
-        // Try to parse JSON
-        try {
-            const translation = JSON.parse(content);
-            console.log(`✓ ${filename} is valid JSON`);
-
-            // Check structure against base translation
-            const baseKeys = Object.keys(baseTranslation);
-            const translationKeys = Object.keys(translation);
-            
-            const missingKeys = baseKeys.filter(key => !translationKeys.includes(key));
-            const extraKeys = translationKeys.filter(key => !baseKeys.includes(key));
-            
-            if (missingKeys.length > 0) {
-                results.valid = false;
-                results.errors.push(`${filename} is missing these keys that exist in en-US.json:\n${missingKeys.map(k => `  - ${k}`).join('\n')}`);
-            }
-            
-            if (extraKeys.length > 0) {
-                results.valid = false;
-                results.errors.push(`${filename} has these extra keys that don't exist in en-US.json:\n${extraKeys.map(k => `  - ${k}`).join('\n')}`);
-            }
-
-        } catch (parseError) {
-            results.valid = false;
-            
-            // Get detailed position info
+        
+        return results.valid;
+    } catch (error) {
+        results.valid = false;
+        if (error instanceof SyntaxError) {
+            // Get line and column from JSON syntax error
             const lines = content.split('\n');
             let lineNo = 0;
             let charNo = 0;
-            const pos = parseError.message.match(/position (\d+)/)?.[1];
             
-            if (pos) {
-                for (let i = 0; i < pos; i++) {
-                    if (content[i] === '\n') {
-                        lineNo++;
-                        charNo = 0;
-                    } else {
-                        charNo++;
-                    }
+            for (let i = 0; i < error.pos; i++) {
+                if (content[i] === '\n') {
+                    lineNo++;
+                    charNo = 0;
+                } else {
+                    charNo++;
                 }
-
-                // Show the problematic line and point to the error
-                const errorLine = lines[lineNo];
-                const pointer = ' '.repeat(charNo) + '^';
-                
-                results.errors.push(
-                    `${filename} has invalid JSON at line ${lineNo + 1}, column ${charNo + 1}:\n` +
-                    `${errorLine}\n${pointer}\n` +
-                    `Error: ${parseError.message}`
-                );
-
-                // Add helpful hints based on common errors
-                if (parseError.message.includes('Expected')) {
-                    if (parseError.message.includes('Expected ,')) {
-                        results.errors.push('Hint: Missing comma between properties');
-                    } else if (parseError.message.includes('Expected "')) {
-                        results.errors.push('Hint: Missing quotes around property name or value');
-                    } else if (parseError.message.includes('Expected }')) {
-                        results.errors.push('Hint: Missing closing brace');
-                    }
-                }
-            } else {
-                // Fallback if we can't get position info
-                results.errors.push(`${filename} has invalid JSON: ${parseError.message}`);
             }
+            
+            results.errors.push(`Invalid JSON at line ${lineNo + 1}, column ${charNo + 1}`);
+            results.errors.push(`Hint: Check for missing commas, quotes, or brackets near this location`);
+        } else {
+            results.errors.push(`Error reading file: ${error.message}`);
         }
-        
-    } catch (error) {
-        results.valid = false;
-        results.errors.push(`Error reading ${path.basename(filePath)}: ${error.message}`);
+        return false;
     }
 }
 
 function main() {
     try {
-        // Load base translation
+        // Load base translation without validation
         const baseTranslation = require('../en-US.json');
         
-        // Get files to validate
+        // Only validate files that changed
         const changedFiles = process.env.CHANGED_FILES ? 
             process.env.CHANGED_FILES.split(',') : 
             fs.readdirSync('translations').filter(f => f.endsWith('.json'));
@@ -119,7 +81,7 @@ function main() {
         
         if (!results.valid) {
             console.error('\nValidation failed:');
-            results.errors.forEach(error => console.error(`\n❌ ${error}`));
+            results.errors.forEach(error => console.error(`❌ ${error}`));
             process.exit(1);
         } else {
             console.log('\n✅ All validations passed!');
@@ -127,11 +89,7 @@ function main() {
         }
         
     } catch (error) {
-        results.errors.push(`Validation script error: ${error.message}`);
-        fs.writeFileSync('validation-results.json', JSON.stringify({
-            valid: false,
-            errors: results.errors
-        }, null, 2));
+        console.error(`\n❌ Validation script error: ${error.message}`);
         process.exit(1);
     }
 }
