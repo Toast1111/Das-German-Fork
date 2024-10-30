@@ -4,7 +4,6 @@ on:
   pull_request:
     paths:
       - 'translations/**.json'
-      - 'en_US.json'
 
 jobs:
   validate:
@@ -13,13 +12,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: Get changed files
+      id: changed-files
+      run: |
+        echo "CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }} ${{ github.sha }} | grep '^translations/.*\.json$' | cut -d'/' -f2 | tr '\n' ',' | sed 's/,$//')" >> $GITHUB_ENV
+    
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
-        
-    - name: Install dependencies
-      run: npm ci
         
     - name: Validate translations
       run: node scripts/validate.js
@@ -35,12 +36,16 @@ jobs:
           let comment = '## Translation Validation Results\n\n';
           
           if (results.valid) {
-            comment += '✅ All checks passed!\n\n';
+            comment += '✅ All checks passed!\n';
+            comment += '- Valid JSON format\n';
+            comment += '- All required translations present\n';
+            comment += '- No extra translations\n';
           } else {
-            comment += '❌ Some checks failed:\n\n';
+            comment += '❌ Validation failed:\n\n';
             results.errors.forEach(error => {
               comment += `- ${error}\n`;
             });
+            comment += '\nPlease fix these issues and update your PR.';
           }
           
           await github.rest.issues.createComment({
