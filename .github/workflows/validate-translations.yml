@@ -23,37 +23,31 @@ jobs:
         node-version: '18'
         
     - name: Validate translations
-      run: node scripts/validate.js
+      id: validate
+      run: |
+        node scripts/validate.js
+        echo "VALIDATION_RESULT=$(cat validation-results.json)" >> $GITHUB_ENV
         
     - name: Add PR comment
       if: always()
       uses: actions/github-script@v6
       with:
         script: |
-          const fs = require('fs');
-          const results = JSON.parse(fs.readFileSync('validation-results.json', 'utf8'));
+          const results = JSON.parse(process.env.VALIDATION_RESULT);
           
           let comment = '## Translation Validation Results\n\n';
           
           if (results.valid) {
-            comment += '✅ All checks passed!\n\n';
+            comment += '✅ All checks passed!\n';
             comment += '- Valid JSON format\n';
             comment += '- All required translations present\n';
             comment += '- No extra translations\n';
           } else {
-            comment += '❌ Validation failed\n\n';
-            comment += '### Issues found:\n\n';
+            comment += '❌ Validation failed:\n\n';
             results.errors.forEach(error => {
-              comment += `${error}\n\n`;
+              comment += `- ${error}\n`;
             });
-            
-            comment += '\n### Common fixes:\n';
-            comment += '1. Use double quotes (") not single quotes (')\n';
-            comment += '2. Remove trailing commas\n';
-            comment += '3. Make sure all property names and values are in double quotes\n';
-            comment += '4. Check that all opening brackets/braces have matching closing ones\n';
-            comment += '5. Ensure commas between properties but not after the last one\n\n';
-            comment += 'Example of valid JSON:\n```json\n{\n  "key": "value",\n  "another": "translation"\n}\n```';
+            comment += '\nPlease fix these issues and update your PR.';
           }
           
           await github.rest.issues.createComment({
