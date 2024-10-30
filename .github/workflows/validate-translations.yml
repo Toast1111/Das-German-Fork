@@ -1,9 +1,20 @@
 name: Validate Translations
 
 on:
+  # Run on PRs targeting main or master
   pull_request:
+    branches: [ main, master ]
     paths:
       - 'translations/**.json'
+  
+  # Run on direct pushes to main/master
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'translations/**.json'
+  
+  # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   validate:
@@ -11,11 +22,19 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Fetch all history for all branches
     
     - name: Get changed files
       id: changed-files
       run: |
-        echo "CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }} ${{ github.sha }} | grep '^translations/.*\.json$' | cut -d'/' -f2 | tr '\n' ',' | sed 's/,$//')" >> $GITHUB_ENV
+        if [ ${{ github.event_name }} == 'pull_request' ]; then
+          # For PRs, check files changed in the PR
+          echo "CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }} ${{ github.sha }} | grep '^translations/.*\.json$' | cut -d'/' -f2 | tr '\n' ',' | sed 's/,$//')" >> $GITHUB_ENV
+        else
+          # For pushes, check files changed in the commit
+          echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^translations/.*\.json$' | cut -d'/' -f2 | tr '\n' ',' | sed 's/,$//')" >> $GITHUB_ENV
+        fi
     
     - name: Setup Node.js
       uses: actions/setup-node@v3
@@ -24,9 +43,9 @@ jobs:
         
     - name: Validate translations
       run: node scripts/validate.js
-        
+      
     - name: Add PR comment
-      if: always()
+      if: github.event_name == 'pull_request' && always()
       uses: actions/github-script@v6
       with:
         script: |
@@ -54,3 +73,16 @@ jobs:
             issue_number: context.issue.number,
             body: comment
           });
+
+    - name: Check validation status
+      if: always()
+      run: |
+        if [ -f validation-results.json ]; then
+          if jq -e '.valid == false' validation-results.json > /dev/null; then
+            echo "Validation failed!"
+            exit 1
+          fi
+        else
+          echo "Validation results file not found!"
+          exit 1
+        fi
