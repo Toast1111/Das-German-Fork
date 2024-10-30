@@ -44,8 +44,8 @@ jobs:
             comment += '- No extra translations\n';
           } else {
             comment += '❌ Validation failed:\n\n';
-            results.errors.forEach(error => {
-              comment += `- ${error}\n`;
+            results.errors.forEach(errors => {
+              comment += `- ${errors}\n`;
             });
             comment += '\nPlease fix these issues and update your PR.';
           }
