@@ -1,0 +1,10 @@
+**File Structure**
+   ```
+   /
+   ├── en_US.json    # Base translation file
+   ├── README.md
+   └── translations/  # Add your translation file here
+       ├── es_ES.json
+       ├── fr_FR.json
+       └── ...
+   ```
