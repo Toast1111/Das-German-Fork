@@ -1086,7 +1086,7 @@
    "rotateDescription": "Dreht den Inhalt um einen angegebenen Winkel.",
    "plain": "Einfach",
    "plainDescription": "Deaktiviert die Effekte aller in diesem MFM-Effekt enthaltenen MFM."
-}
+},
 "_instanceTicker": {
     "none": "Niemals anzeigen",
     "remote": "Für entfernte Benutzer anzeigen",
@@ -1238,7 +1238,7 @@
     "minute": "Minute(n)",
     "hour": "Stunde(n)",
     "day": "Tag(e)"
-}
+},
   "_tutorial": {
      "title": "How to use Barkle",
      "step1_1": "Welcome!",
