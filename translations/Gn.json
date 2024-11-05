@@ -1383,197 +1383,197 @@
     "remainingMinutes": "{m} Minute(n) {s} Sekunde(n) verbleibend",
     "remainingSeconds": "{s} Sekunde(n) verbleibend"
   },
-  "_visibility": {
-     "public": "Public",
-     "publicDescription": "Your bark will be visible for all users",
-     "home": "Home",
-     "homeDescription": "Post to home timeline only",
-     "followers": "Followers",
-     "followersDescription": "Make visible to your followers only",
-     "specified": "Direct",
-     "specifiedDescription": "Make visible for specified users only",
-     "localOnly": "Local only",
-     "localOnlyDescription": "Not visible to remote users"
-  },
-  "_postForm": {
-     "replyPlaceholder": "Reply to this bark...",
-     "quotePlaceholder": "Quote this bark...",
-     "channelPlaceholder": "Post to a channel...",
-     "_placeholders": {
-        "a": "What are you up to?",
-        "b": "What's happening around you?",
-        "c": "What's on your mind?",
-        "d": "What do you want to say?",
-        "e": "Start writing...",
-        "f": "Waiting for you to write..."
-     }
-  },
-  "_profile": {
-     "name": "Name",
-     "username": "Username",
-     "description": "Bio",
-     "youCanIncludeHashtags": "You can also include hashtags in your bio.",
-     "metadata": "Additional Information",
-     "metadataEdit": "Edit additional Information",
-     "metadataDescription": "Using these, you can display additional information fields in your profile.",
-     "metadataLabel": "Label",
-     "metadataContent": "Content",
-     "changeAvatar": "Change avatar",
-     "changeBanner": "Change banner",
-     "css": "Custom profile CSS",
-     "cssDoc": "You can use CSS to customize your profile. Please note that this is not a full-fledged CSS editor, so you may not be able to use some CSS features."
-  },
-  "_exportOrImport": {
-     "allNotes": "All barks",
-     "followingList": "Followed users",
-     "muteList": "Muted users",
-     "blockingList": "Blocked users",
-     "userLists": "User lists",
-     "excludeMutingUsers": "Exclude muted users",
-     "excludeInactiveUsers": "Exclude inactive users"
-  },
-  "_charts": {
-     "federation": "Federation",
-     "apRequest": "Requests",
-     "usersIncDec": "Difference in the number of users",
-     "usersTotal": "Total number of users",
-     "activeUsers": "Active users",
-     "notesIncDec": "Difference in the number of barks",
-     "localNotesIncDec": "Difference in the number of local barks",
-     "remoteNotesIncDec": "Difference in the number of remote barks",
-     "notesTotal": "Total number of barks",
-     "filesIncDec": "Difference in the number of files",
-     "filesTotal": "Total number of files",
-     "storageUsageIncDec": "Difference in storage usage",
-     "storageUsageTotal": "Total storage usage"
-  },
-  "_instanceCharts": {
-     "requests": "Requests",
-     "users": "Difference in the number of users",
-     "usersTotal": "Cumulative number of users",
-     "notes": "Difference in the number of barks",
-     "notesTotal": "Cumulative number of barks",
-     "ff": "Difference in the number of followed users / followers ",
-     "ffTotal": "Cumulative number of followed users / followers",
-     "cacheSize": "Difference in cache size",
-     "cacheSizeTotal": "Cumulative total cache size",
-     "files": "Difference in the number of files",
-     "filesTotal": "Cumulative number of files"
-  },
-  "_timelines": {
-     "home": "Following",
-     "local": "Local",
-     "recommended": "Recommended",
-     "social": "Social",
-     "global": "Global"
-  },
-  "_pages": {
-     "newPage": "Create a new Page",
-     "editPage": "Edit this Page",
-     "readPage": "Viewing this Page's source",
-     "created": "Page successfully created",
-     "updated": "Page successfully edited",
-     "deleted": "Page successfully deleted",
-     "pageSetting": "Page settings",
-     "nameAlreadyExists": "The specified Page URL already exists",
-     "invalidNameTitle": "The specified Page URL is invalid",
-     "invalidNameText": "Make sure the Page title is not empty",
-     "editThisPage": "Edit this Page",
-     "viewSource": "View source",
-     "viewPage": "View your Pages",
-     "like": "Like",
-     "unlike": "Remove like",
-     "my": "My Pages",
-     "liked": "Liked Pages",
-     "featured": "Popular",
-     "inspector": "Inspector",
-     "contents": "Content",
-     "content": "Page block",
-     "variables": "Variables",
-     "title": "Title",
-     "url": "Page URL",
-     "summary": "Page summary",
-     "alignCenter": "Center elements",
-     "hideTitleWhenPinned": "Hide Page title when pinned to profile",
-     "font": "Font",
-     "fontSerif": "Serif",
-     "fontSansSerif": "Sans Serif",
-     "eyeCatchingImageSet": "Set thumbnail",
-     "eyeCatchingImageRemove": "Delete thumbnail",
-     "chooseBlock": "Add a block",
-     "selectType": "Select a type",
-     "enterVariableName": "Enter a variable name",
-     "variableNameIsAlreadyUsed": "This variable name is already in use",
-     "contentBlocks": "Content",
-     "inputBlocks": "Input",
-     "specialBlocks": "Special",
-     "blocks": {
-        "text": "Text",
-        "textarea": "Text area",
-        "section": "Section",
-        "image": "Images",
-        "button": "Button",
-        "if": "If",
-        "_if": {
-           "variable": "Variable"
-        },
-        "post": "Posting form",
-        "_post": {
-           "text": "Content",
-           "attachCanvasImage": "Attach canvas image",
-           "canvasId": "Canvas ID"
-        },
-        "textInput": "Text input",
-        "_textInput": {
-           "name": "Variable name",
-           "text": "Title",
-           "default": "Default value"
-        },
-        "textareaInput": "Multiline text input",
-        "_textareaInput": {
-           "name": "Variable name",
-           "text": "Title",
-           "default": "Default value"
-        },
-        "numberInput": "Numeric input",
-        "_numberInput": {
-           "name": "Variable name",
-           "text": "Title",
-           "default": "Default value"
-        },
-        "canvas": "Canvas",
-        "_canvas": {
-           "id": "Canvas ID",
-           "width": "Width",
-           "height": "Height"
-        },
-        "note": "Embedded bark",
-        "_note": {
-           "id": "Bark ID",
-           "idDescription": "You can alternatively paste the bark URL here.",
-           "detailed": "Detailed view"
-        },
-        "switch": "Switch",
-        "_switch": {
-           "name": "Variable name",
-           "text": "Title",
-           "default": "Default value"
-        },
-        "counter": "Counter",
-        "_counter": {
-           "name": "Variable name",
-           "text": "Title",
-           "inc": "Step"
-        },
-        "_button": {
-           "text": "Title",
-           "colored": "Colored",
-           "action": "Behavior when the button is pressed",
-           "_action": {
-              "dialog": "Show a dialog",
-              "_dialog": {
-                 "content": "Content"
-              },
+"_visibility": {
+   "public": "Öffentlich",
+   "publicDescription": "Dein Bark wird für alle Nutzer sichtbar sein",
+   "home": "Home",
+   "homeDescription": "Nur auf der Home-Timeline posten",
+   "followers": "Follower",
+   "followersDescription": "Nur für deine Follower sichtbar",
+   "specified": "Direkt",
+   "specifiedDescription": "Nur für angegebene Nutzer sichtbar",
+   "localOnly": "Nur lokal",
+   "localOnlyDescription": "Nicht für externe Nutzer sichtbar"
+},
+"_postForm": {
+   "replyPlaceholder": "Auf diesen Bark antworten...",
+   "quotePlaceholder": "Diesen Bark zitieren...",
+   "channelPlaceholder": "In einem Kanal posten...",
+   "_placeholders": {
+      "a": "Was machst du gerade?",
+      "b": "Was passiert um dich herum?",
+      "c": "Was beschäftigt dich?",
+      "d": "Was möchtest du sagen?",
+      "e": "Schreib los...",
+      "f": "Warte darauf, dass du schreibst..."
+   }
+},
+"_profile": {
+   "name": "Name",
+   "username": "Benutzername",
+   "description": "Bio",
+   "youCanIncludeHashtags": "Du kannst auch Hashtags in deiner Bio verwenden.",
+   "metadata": "Zusätzliche Informationen",
+   "metadataEdit": "Zusätzliche Informationen bearbeiten",
+   "metadataDescription": "Damit kannst du zusätzliche Informationsfelder in deinem Profil anzeigen.",
+   "metadataLabel": "Bezeichnung",
+   "metadataContent": "Inhalt",
+   "changeAvatar": "Avatar ändern",
+   "changeBanner": "Banner ändern",
+   "css": "Benutzerdefiniertes Profil-CSS",
+   "cssDoc": "Du kannst CSS verwenden, um dein Profil anzupassen. Beachte, dass dies kein vollständiger CSS-Editor ist, sodass einige CSS-Funktionen möglicherweise nicht verwendet werden können."
+},
+"_exportOrImport": {
+   "allNotes": "Alle Barks",
+   "followingList": "Gefolgte Nutzer",
+   "muteList": "Stummgeschaltete Nutzer",
+   "blockingList": "Blockierte Nutzer",
+   "userLists": "Nutzerlisten",
+   "excludeMutingUsers": "Stummgeschaltete Nutzer ausschließen",
+   "excludeInactiveUsers": "Inaktive Nutzer ausschließen"
+},
+"_charts": {
+   "federation": "Föderation",
+   "apRequest": "Anfragen",
+   "usersIncDec": "Differenz in der Nutzerzahl",
+   "usersTotal": "Gesamte Nutzeranzahl",
+   "activeUsers": "Aktive Nutzer",
+   "notesIncDec": "Differenz in der Anzahl der Barks",
+   "localNotesIncDec": "Differenz in der Anzahl lokaler Barks",
+   "remoteNotesIncDec": "Differenz in der Anzahl externer Barks",
+   "notesTotal": "Gesamtanzahl der Barks",
+   "filesIncDec": "Differenz in der Anzahl der Dateien",
+   "filesTotal": "Gesamtanzahl der Dateien",
+   "storageUsageIncDec": "Differenz im Speicherverbrauch",
+   "storageUsageTotal": "Gesamter Speicherverbrauch"
+},
+"_instanceCharts": {
+   "requests": "Anfragen",
+   "users": "Differenz in der Nutzerzahl",
+   "usersTotal": "Kumulative Nutzeranzahl",
+   "notes": "Differenz in der Anzahl der Barks",
+   "notesTotal": "Kumulative Anzahl der Barks",
+   "ff": "Differenz in der Anzahl der gefolgten Nutzer / Follower",
+   "ffTotal": "Kumulative Anzahl der gefolgten Nutzer / Follower",
+   "cacheSize": "Differenz in der Cache-Größe",
+   "cacheSizeTotal": "Kumulative Cache-Gesamtgröße",
+   "files": "Differenz in der Anzahl der Dateien",
+   "filesTotal": "Kumulative Anzahl der Dateien"
+},
+"_timelines": {
+   "home": "Folgend",
+   "local": "Lokal",
+   "recommended": "Empfohlen",
+   "social": "Sozial",
+   "global": "Global"
+},
+"_pages": {
+   "newPage": "Eine neue Seite erstellen",
+   "editPage": "Diese Seite bearbeiten",
+   "readPage": "Quelltext dieser Seite anzeigen",
+   "created": "Seite erfolgreich erstellt",
+   "updated": "Seite erfolgreich bearbeitet",
+   "deleted": "Seite erfolgreich gelöscht",
+   "pageSetting": "Seiteneinstellungen",
+   "nameAlreadyExists": "Die angegebene Seiten-URL existiert bereits",
+   "invalidNameTitle": "Die angegebene Seiten-URL ist ungültig",
+   "invalidNameText": "Stelle sicher, dass der Seitentitel nicht leer ist",
+   "editThisPage": "Diese Seite bearbeiten",
+   "viewSource": "Quelltext anzeigen",
+   "viewPage": "Deine Seiten anzeigen",
+   "like": "Gefällt mir",
+   "unlike": "Gefällt mir entfernen",
+   "my": "Meine Seiten",
+   "liked": "Seiten, die dir gefallen",
+   "featured": "Beliebt",
+   "inspector": "Inspektor",
+   "contents": "Inhalt",
+   "content": "Seitenblock",
+   "variables": "Variablen",
+   "title": "Titel",
+   "url": "Seiten-URL",
+   "summary": "Seitenzusammenfassung",
+   "alignCenter": "Elemente zentrieren",
+   "hideTitleWhenPinned": "Seitentitel ausblenden, wenn auf Profil angepinnt",
+   "font": "Schriftart",
+   "fontSerif": "Serif",
+   "fontSansSerif": "Sans Serif",
+   "eyeCatchingImageSet": "Thumbnail festlegen",
+   "eyeCatchingImageRemove": "Thumbnail löschen",
+   "chooseBlock": "Block hinzufügen",
+   "selectType": "Typ auswählen",
+   "enterVariableName": "Variablennamen eingeben",
+   "variableNameIsAlreadyUsed": "Dieser Variablenname wird bereits verwendet",
+   "contentBlocks": "Inhalt",
+   "inputBlocks": "Eingabe",
+   "specialBlocks": "Spezial",
+   "blocks": {
+      "text": "Text",
+      "textarea": "Textfeld",
+      "section": "Abschnitt",
+      "image": "Bilder",
+      "button": "Button",
+      "if": "Wenn",
+      "_if": {
+         "variable": "Variable"
+      },
+      "post": "Posting-Formular",
+      "_post": {
+         "text": "Inhalt",
+         "attachCanvasImage": "Canvas-Bild anhängen",
+         "canvasId": "Canvas-ID"
+      },
+      "textInput": "Text-Eingabe",
+      "_textInput": {
+         "name": "Variablenname",
+         "text": "Titel",
+         "default": "Standardwert"
+      },
+      "textareaInput": "Mehrzeilige Text-Eingabe",
+      "_textareaInput": {
+         "name": "Variablenname",
+         "text": "Titel",
+         "default": "Standardwert"
+      },
+      "numberInput": "Numerische Eingabe",
+      "_numberInput": {
+         "name": "Variablenname",
+         "text": "Titel",
+         "default": "Standardwert"
+      },
+      "canvas": "Canvas",
+      "_canvas": {
+         "id": "Canvas-ID",
+         "width": "Breite",
+         "height": "Höhe"
+      },
+      "note": "Eingebetteter Bark",
+      "_note": {
+         "id": "Bark-ID",
+         "idDescription": "Du kannst alternativ die Bark-URL hier einfügen.",
+         "detailed": "Detailansicht"
+      },
+      "switch": "Schalter",
+      "_switch": {
+         "name": "Variablenname",
+         "text": "Titel",
+         "default": "Standardwert"
+      },
+      "counter": "Zähler",
+      "_counter": {
+         "name": "Variablenname",
+         "text": "Titel",
+         "inc": "Schritt"
+      },
+      "_button": {
+         "text": "Titel",
+         "colored": "Farbig",
+         "action": "Verhalten beim Drücken des Buttons",
+         "_action": {
+            "dialog": "Ein Dialog anzeigen",
+            "_dialog": {
+               "content": "Inhalt"
+            }
               "resetRandom": "Reset the random seed",
               "pushEvent": "Send an event",
               "_pushEvent": {
