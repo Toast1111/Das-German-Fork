@@ -3,6 +3,11 @@
   "debug": "Debug",
   "headlineBarkle": "Bell auf Barkle",
   "introBarkle": "Willkommen! Barkle ist ein Microblogging-Dienst.\nErstelle \"Bellen\" um deine Gedanken mit allen zu teilen.\nMit \"Reaktionen\" kannst du auch schnell deine Gefühle zu den Bellen anderer ausdrücken.\nBell es raus auf Barkle!",
+  "landingTagline1": "Bark es heraus auf Barkle!",
+  "landingTagline2": "Teile deine Gedanken auf Barkle",
+  "landingTagline3": "Gründe eine Community auf Barkle!",
+  "landingTagline4": "Finde Freunde auf Barkle!",
+  "landingTagline5": "Keine Ahnung, was ich hier auf Barkle schreiben soll! :P"
   "monthAndDay": "{month}/{day}",
   "search": "Suche",
   "notifications": "Benachrichtigungen",
