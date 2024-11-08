@@ -1513,225 +1513,225 @@
    "inputBlocks": "Eingabe",
    "specialBlocks": "Spezial",
    "blocks": {
-      "text": "Text",
-      "textarea": "Textbereich",
-      "section": "Abschnitt",
-      "image": "Bilder",
-      "button": "Schaltfläche",
-      "if": "Wenn",
-      "_if": {
-         "variable": "Variable"
-        },
-        "post": "Posting form",
-        "_post": {
-           "text": "Content",
-           "attachCanvasImage": "Attach canvas image",
-           "canvasId": "Canvas ID"
-        },
-        "textInput": "Text input",
-        "_textInput": {
-           "name": "Variable name",
-           "text": "Title",
-           "default": "Default value"
-        },
-        "textareaInput": "Multiline text input",
-        "_textareaInput": {
-           "name": "Variable name",
-           "text": "Title",
-           "default": "Default value"
-        },
-        "numberInput": "Numeric input",
-        "_numberInput": {
-           "name": "Variable name",
-           "text": "Title",
-           "default": "Default value"
-        },
-        "canvas": "Canvas",
-        "_canvas": {
-           "id": "Canvas ID",
-           "width": "Width",
-           "height": "Height"
-        },
-        "note": "Embedded bark",
-        "_note": {
-           "id": "Bark ID",
-           "idDescription": "You can alternatively paste the bark URL here.",
-           "detailed": "Detailed view"
-        },
-        "switch": "Switch",
-        "_switch": {
-           "name": "Variable name",
-           "text": "Title",
-           "default": "Default value"
-        },
-        "counter": "Counter",
-        "_counter": {
-           "name": "Variable name",
-           "text": "Title",
-           "inc": "Step"
-        },
-        "_button": {
-           "text": "Title",
-           "colored": "Colored",
-           "action": "Behavior when the button is pressed",
-           "_action": {
-              "dialog": "Show a dialog",
-              "_dialog": {
-                 "content": "Content"
-              },
-              "resetRandom": "Reset the random seed",
-              "pushEvent": "Send an event",
-              "_pushEvent": {
-                 "event": "Event name",
-                 "message": "Message to display when activated",
-                 "variable": "Variable to send",
-                 "no-variable": "None"
-              },
-              "callAiScript": "Invoke AiScript",
-              "_callAiScript": {
-                 "functionName": "Function name"
-              }
-           }
-        },
-        "radioButton": "Choice",
-        "_radioButton": {
-           "name": "Variable name",
-           "title": "Title",
-           "values": "List of choices separated by line breaks",
-           "default": "Default value"
-        }
-     },
-     "script": {
-        "categories": {
-           "flow": "Flow control",
-           "logical": "Logical operation",
-           "operation": "Computation",
-           "comparison": "Comparison",
-           "random": "Random",
-           "value": "Values",
-           "fn": "Functions",
-           "text": "Text operations",
-           "convert": "Transformations",
-           "list": "Lists"
-        },
-        "blocks": {
-           "text": "Text",
-           "multiLineText": "Text (multiline)",
-           "textList": "Text list",
-           "_textList": {
-              "info": "Separate each entry with a line break"
-           },
-           "strLen": "Text length",
-           "_strLen": {
-              "arg1": "Text"
-           },
-           "strPick": "Extract string",
-           "_strPick": {
-              "arg1": "Text",
-              "arg2": "String location"
-           },
-           "strReplace": "Replacement string",
-           "_strReplace": {
-              "arg1": "Text",
-              "arg2": "Text to be replaced",
-              "arg3": "Replace with"
-           },
-           "strReverse": "Flip text",
-           "_strReverse": {
-              "arg1": "Text"
-           },
-           "join": "Text concatenation",
-           "_join": {
-              "arg1": "Lists",
-              "arg2": "Separator"
-           },
-           "add": "Add",
-           "_add": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "subtract": "Subtract",
-           "_subtract": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "multiply": "Multiply",
-           "_multiply": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "divide": "Divide",
-           "_divide": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "mod": "Remainder",
-           "_mod": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "round": "Decimal rounding",
-           "_round": {
-              "arg1": "Number"
-           },
-           "eq": "A and B are equal",
-           "_eq": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "notEq": "A and B are different",
-           "_notEq": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "and": "A AND B",
-           "_and": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "or": "A OR B",
-           "_or": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "lt": "< A is less than B",
-           "_lt": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "gt": "> A is larger than B",
-           "_gt": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "ltEq": "<= A is less than or equal to B",
-           "_ltEq": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "gtEq": ">= A is greater than or equal to B",
-           "_gtEq": {
-              "arg1": "A",
-              "arg2": "B"
-           },
-           "if": "Branch",
-           "_if": {
-              "arg1": "If",
-              "arg2": "Then",
-              "arg3": "Else"
-           },
-           "not": "NOT",
-           "_not": {
-              "arg1": "NOT"
-           },
-           "random": "Random",
-           "_random": {
-              "arg1": "Probability"
-           },
-           "rannum": "Random number",
-           "_rannum": {
-              "arg1": "Minimum value",
-              "arg2": "Maximum value"
+"text": "Text",
+"textarea": "Textbereich",
+"section": "Abschnitt",
+"image": "Bilder",
+"button": "Schaltfläche",
+"if": "Wenn",
+"_if": {
+   "variable": "Variable"
+},
+"post": "Posting-Formular",
+"_post": {
+   "text": "Inhalt",
+   "attachCanvasImage": "Leinwandbild anhängen",
+   "canvasId": "Leinwand-ID"
+},
+"textInput": "Texteingabe",
+"_textInput": {
+   "name": "Variablenname",
+   "text": "Titel",
+   "default": "Standardwert"
+},
+"textareaInput": "Mehrzeilige Texteingabe",
+"_textareaInput": {
+   "name": "Variablenname",
+   "text": "Titel",
+   "default": "Standardwert"
+},
+"numberInput": "Numerische Eingabe",
+"_numberInput": {
+   "name": "Variablenname",
+   "text": "Titel",
+   "default": "Standardwert"
+},
+"canvas": "Leinwand",
+"_canvas": {
+   "id": "Leinwand-ID",
+   "width": "Breite",
+   "height": "Höhe"
+},
+"note": "Eingebetteter Beitrag",
+"_note": {
+   "id": "Beitrags-ID",
+   "idDescription": "Alternativ können Sie die Beitrags-URL hier einfügen.",
+   "detailed": "Detailansicht"
+},
+"switch": "Schalter",
+"_switch": {
+   "name": "Variablenname",
+   "text": "Titel",
+   "default": "Standardwert"
+},
+"counter": "Zähler",
+"_counter": {
+   "name": "Variablenname",
+   "text": "Titel",
+   "inc": "Schritt"
+},
+"_button": {
+   "text": "Titel",
+   "colored": "Farbig",
+   "action": "Verhalten bei Knopfdruck",
+   "_action": {
+      "dialog": "Dialog anzeigen",
+      "_dialog": {
+         "content": "Inhalt"
+      },
+      "resetRandom": "Zufallsgenerator zurücksetzen",
+      "pushEvent": "Ereignis senden",
+      "_pushEvent": {
+         "event": "Ereignisname",
+         "message": "Nachricht bei Aktivierung",
+         "variable": "Zu sendende Variable",
+         "no-variable": "Keine"
+      },
+      "callAiScript": "AiScript aufrufen",
+      "_callAiScript": {
+         "functionName": "Funktionsname"
+      }
+   }
+},
+"radioButton": "Auswahl",
+"_radioButton": {
+   "name": "Variablenname",
+   "title": "Titel",
+   "values": "Liste der Auswahlmöglichkeiten, getrennt durch Zeilenumbrüche",
+   "default": "Standardwert"
+}
+},
+"script": {
+"categories": {
+   "flow": "Flusssteuerung",
+   "logical": "Logische Operation",
+   "operation": "Berechnung",
+   "comparison": "Vergleich",
+   "random": "Zufall",
+   "value": "Werte",
+   "fn": "Funktionen",
+   "text": "Textoperationen",
+   "convert": "Umwandlungen",
+   "list": "Listen"
+},
+"blocks": {
+   "text": "Text",
+   "multiLineText": "Text (mehrzeilig)",
+   "textList": "Textliste",
+   "_textList": {
+      "info": "Trennen Sie jeden Eintrag mit einem Zeilenumbruch"
+   },
+   "strLen": "Textlänge",
+   "_strLen": {
+      "arg1": "Text"
+   },
+   "strPick": "Zeichenkette extrahieren",
+   "_strPick": {
+      "arg1": "Text",
+      "arg2": "Position der Zeichenkette"
+   },
+   "strReplace": "Ersetzungszeichenkette",
+   "_strReplace": {
+      "arg1": "Text",
+      "arg2": "Zu ersetzender Text",
+      "arg3": "Ersetzen durch"
+   },
+   "strReverse": "Text umdrehen",
+   "_strReverse": {
+      "arg1": "Text"
+   },
+   "join": "Textverknüpfung",
+   "_join": {
+      "arg1": "Listen",
+      "arg2": "Trennzeichen"
+   },
+   "add": "Addieren",
+   "_add": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "subtract": "Subtrahieren",
+   "_subtract": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "multiply": "Multiplizieren",
+   "_multiply": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "divide": "Dividieren",
+   "_divide": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "mod": "Rest",
+   "_mod": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "round": "Runden",
+   "_round": {
+      "arg1": "Zahl"
+   },
+   "eq": "A und B sind gleich",
+   "_eq": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "notEq": "A und B sind unterschiedlich",
+   "_notEq": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "and": "A UND B",
+   "_and": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "or": "A ODER B",
+   "_or": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "lt": "< A ist kleiner als B",
+   "_lt": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "gt": "> A ist größer als B",
+   "_gt": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "ltEq": "<= A ist kleiner oder gleich B",
+   "_ltEq": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "gtEq": ">= A ist größer oder gleich B",
+   "_gtEq": {
+      "arg1": "A",
+      "arg2": "B"
+   },
+   "if": "Verzweigung",
+   "_if": {
+      "arg1": "Wenn",
+      "arg2": "Dann",
+      "arg3": "Sonst"
+   },
+   "not": "NICHT",
+   "_not": {
+      "arg1": "NICHT"
+   },
+   "random": "Zufall",
+   "_random": {
+      "arg1": "Wahrscheinlichkeit"
+   },
+   "rannum": "Zufallszahl",
+   "_rannum": {
+      "arg1": "Mindestwert",
+      "arg2": "Höchstwert"
            },
            "randomPick": "Randomly choose from list",
            "_randomPick": {
