@@ -1868,78 +1868,78 @@
        "arg1": "Mindestwert",
        "arg2": "Höchstwert"
             },
-            "randomPick": "Randomly choose from list",
-            "_randomPick": {
-               "arg1": "List"
-            },
-            "dailyRandom": "Random (Changes once a day for each user)",
-            "_dailyRandom": {
-               "arg1": "Probability"
-            },
-            "dailyRannum": "Random number (Changes once a day for each user)",
-            "_dailyRannum": {
-               "arg1": "Minimum value",
-               "arg2": "Maximum value"
-            },
-            "dailyRandomPick": "Randomly choose from a list (Changes once a day for each user)",
-            "_dailyRandomPick": {
-               "arg1": "List"
-            },
-            "seedRandom": "Random (with seed)",
-            "_seedRandom": {
-               "arg1": "Seed",
-               "arg2": "Probability"
-            },
-            "seedRannum": "Random number (with seed)",
-            "_seedRannum": {
-               "arg1": "Seed",
-               "arg2": "Minimum value",
-               "arg3": "Maximum value"
-            },
-            "seedRandomPick": "Randomly choose from list (with seed)",
-            "_seedRandomPick": {
-               "arg1": "Seed",
-               "arg2": "List"
-            },
-            "DRPWPM": "Randomly choose from weighted list (Changes once a day for each user)",
-            "_DRPWPM": {
-               "arg1": "Text list"
-            },
-            "pick": "Select from list",
-            "_pick": {
-               "arg1": "List",
-               "arg2": "Position"
-            },
-            "listLen": "Get length of list",
-            "_listLen": {
-               "arg1": "List"
-            },
-            "number": "Number",
-            "stringToNumber": "Text to number",
-            "_stringToNumber": {
-               "arg1": "Text"
-            },
-            "numberToString": "Number to text",
-            "_numberToString": {
-               "arg1": "Number"
-            },
-            "splitStrByLine": "Split text by line breaks",
-            "_splitStrByLine": {
-               "arg1": "Text"
-            },
-            "ref": "Variable",
-            "aiScriptVar": "AiScript Variable",
-            "fn": "Function",
-            "_fn": {
-               "slots": "Slots",
-               "slots-info": "Separate each slot with a line break",
-               "arg1": "Output"
-            },
-            "for": "for-Loop",
-            "_for": {
-               "arg1": "Number of times to repeat",
-               "arg2": "Action"
-            }
+  "randomPick": "Zufällige Auswahl aus der Liste",
+  "_randomPick": {
+    "arg1": "Liste"
+  },
+  "dailyRandom": "Zufall (Ändert sich einmal täglich für jeden Nutzer)",
+  "_dailyRandom": {
+    "arg1": "Wahrscheinlichkeit"
+  },
+  "dailyRannum": "Zufallszahl (Ändert sich einmal täglich für jeden Nutzer)",
+  "_dailyRannum": {
+    "arg1": "Minimalwert",
+    "arg2": "Maximalwert"
+  },
+  "dailyRandomPick": "Zufällige Auswahl aus der Liste (Ändert sich einmal täglich für jeden Nutzer)",
+  "_dailyRandomPick": {
+    "arg1": "Liste"
+  },
+  "seedRandom": "Zufall (mit Seed)",
+  "_seedRandom": {
+    "arg1": "Seed",
+    "arg2": "Wahrscheinlichkeit"
+  },
+  "seedRannum": "Zufallszahl (mit Seed)",
+  "_seedRannum": {
+    "arg1": "Seed",
+    "arg2": "Minimalwert",
+    "arg3": "Maximalwert"
+  },
+  "seedRandomPick": "Zufällige Auswahl aus der Liste (mit Seed)",
+  "_seedRandomPick": {
+    "arg1": "Seed",
+    "arg2": "Liste"
+  },
+  "DRPWPM": "Zufällige Auswahl aus gewichteter Liste (Ändert sich einmal täglich für jeden Nutzer)",
+  "_DRPWPM": {
+    "arg1": "Textliste"
+  },
+  "pick": "Auswahl aus der Liste",
+  "_pick": {
+    "arg1": "Liste",
+    "arg2": "Position"
+  },
+  "listLen": "Länge der Liste abrufen",
+  "_listLen": {
+    "arg1": "Liste"
+  },
+  "number": "Nummer",
+  "stringToNumber": "Text zu Zahl",
+  "_stringToNumber": {
+    "arg1": "Text"
+  },
+  "numberToString": "Zahl zu Text",
+  "_numberToString": {
+    "arg1": "Nummer"
+  },
+  "splitStrByLine": "Text nach Zeilenumbrüchen aufteilen",
+  "_splitStrByLine": {
+    "arg1": "Text"
+  },
+  "ref": "Variable",
+  "aiScriptVar": "AiScript Variable",
+  "fn": "Funktion",
+  "_fn": {
+    "slots": "Slots",
+    "slots-info": "Trenne jeden Slot mit einem Zeilenumbruch",
+    "arg1": "Ausgabe"
+  },
+  "for": "for-Schleife",
+  "_for": {
+    "arg1": "Anzahl der Wiederholungen",
+    "arg2": "Aktion"
+  }
  },
          "typeError": "Slot {slot} akzeptiert Werte vom Typ \"{expect}\", aber der bereitgestellte Wert ist vom Typ \"{actual}\"!",
          "thereIsEmptySlot": "Slot {slot} ist leer!",
